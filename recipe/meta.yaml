@@ -1,5 +1,5 @@
 {% set name = "anaconda-cloud-auth" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/anaconda_cloud_auth-{{ version }}.tar.gz
-  sha256: df6002cb2619da182f9be9f609a83363a87152beb6392645beab425ad4f2937c
+  sha256: 2cd4872b3ee921616da6ccb7d3efde5dacffdbf108dcc5f649e00c3225b13fa7
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.8
+    - python
     - hatchling
     - hatch-vcs >=0.3
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >=3.8
+    - python
     - keyring
     - pkce
     - python-dotenv
@@ -35,13 +34,22 @@ test:
   imports:
     - anaconda_cloud_auth
   commands:
+    - pip check
     - python -c "from anaconda_cloud_auth import __version__; assert __version__ == \"{{ version }}\""
+  requires:
+    - pip
 
 about:
   summary: A client auth library for Anaconda.cloud APIs
+  description: |
+    A client library for Anaconda.cloud APIs to authenticate and securely store API keys.
+    This package also provides a requests client class that handles loading the API key 
+    for requests made to Anaconda Cloud services.
   home: https://anaconda.cloud
+  doc_url: https://pypi.org/project/anaconda-cloud-auth/
   license: BSD-3-Clause
   license_file: LICENSE
+  license_family: BSD
 
 extra:
   recipe-maintainers:
