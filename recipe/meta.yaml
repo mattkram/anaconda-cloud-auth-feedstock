@@ -1,5 +1,5 @@
 {% set name = "anaconda-cloud-auth" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/anaconda_cloud_auth-{{ version }}.tar.gz
-  sha256: 2cd4872b3ee921616da6ccb7d3efde5dacffdbf108dcc5f649e00c3225b13fa7
+  sha256: 60e0f839718e3e20aaa92bfd8fe1b32059228124c4dc31a7e48675cda69ff1ce
 
 build:
   noarch: python
