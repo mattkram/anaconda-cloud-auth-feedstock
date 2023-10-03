@@ -30,6 +30,7 @@ requirements:
     - pyjwt
     - requests
     - cryptography >=3.4.0
+    - semver >3
 
 test:
   imports:
