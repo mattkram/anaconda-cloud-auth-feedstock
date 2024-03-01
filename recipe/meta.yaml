@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python
     - hatchling
     - hatch-vcs >=0.3
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >=3.8,<3.12
+    - python
     - keyring
     - pkce
     - python-dotenv
@@ -49,6 +49,7 @@ about:
     for requests made to Anaconda Cloud services.
   home: https://anaconda.cloud
   doc_url: https://pypi.org/project/anaconda-cloud-auth/
+  dev_url: https://pypi.org/project/anaconda-cloud-auth/
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
