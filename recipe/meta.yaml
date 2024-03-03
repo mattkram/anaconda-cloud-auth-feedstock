@@ -44,7 +44,7 @@ test:
 about:
   summary: A client auth library for Anaconda.cloud APIs
   description: |
-    A client library for Anaconda.cloud APIs to authenticate and securely store API keys.
+    A client library for Anaconda.cloud APIs to authenticate & securely store API keys.
     This package also provides a requests client class that handles loading the API key 
     for requests made to Anaconda Cloud services.
   home: https://anaconda.cloud
