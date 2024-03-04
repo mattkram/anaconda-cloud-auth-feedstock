@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python
-    - keyring
+    - keyring # [not win]
     - pkce
     - python-dotenv
     - pydantic <2.0
