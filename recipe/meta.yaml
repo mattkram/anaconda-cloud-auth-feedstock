@@ -31,6 +31,7 @@ requirements:
     - requests
     - cryptography >=3.4.0
     - semver <3
+    - pywin32-ctypes 0.2.2  # [win]
 
 test:
   imports:
