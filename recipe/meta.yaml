@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python
-    - keyring <=23.13.1
+    - keyring
     - pkce
     - python-dotenv
     - pydantic <2.0
