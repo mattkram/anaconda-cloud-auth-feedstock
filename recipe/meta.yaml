@@ -19,7 +19,6 @@ requirements:
     - python
     - hatchling
     - hatch-vcs >=0.3
-    - setuptools-scm >=7.1
     - pip
   run:
     - python
