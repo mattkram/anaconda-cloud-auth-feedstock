@@ -1,5 +1,5 @@
 {% set name = "anaconda-cloud-auth" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/anaconda_cloud_auth-{{ version }}.tar.gz
-  sha256: ff61aab300fa174a4ee02578e22be81ee1e093a9aa75d835e232130ac75894df
+  sha256: d9e2a0c4a9be478060d33950ff1aa4186c43ad901a112944cdbaac4951c1d45b
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   number: 0
-  # trigger
 
 requirements:
   host:
@@ -29,7 +28,7 @@ requirements:
     - pyjwt
     - requests
     - cryptography >=3.4.0
-    - semver <3
+    - semver
 test:
   imports:
     - anaconda_cloud_auth
