@@ -28,7 +28,7 @@ requirements:
     - pyjwt
     - requests
     - cryptography >=3.4.0
-    - semver
+    - semver <4
 test:
   imports:
     - anaconda_cloud_auth
