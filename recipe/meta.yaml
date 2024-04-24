@@ -31,6 +31,8 @@ requirements:
     - requests
     - cryptography >=3.4.0
     - semver
+  run_constrained:
+    - conda >=23.9.0
 
 test:
   imports:
